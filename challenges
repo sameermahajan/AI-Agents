@@ -5,6 +5,7 @@
 - language barrier
 - different content generated with embedded html (more visited places)
 - medium image URLs are encoded and can't be easily scraped
+- it is not very straight forward to post HTML to any blogging site for viewing and interacting, especially table
 
 - scraper taking an array of web pages
 - rate the trips
