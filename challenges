@@ -1,0 +1,10 @@
+- token limit : necessitated page by page processing
+- generated HTML was not consistent, generated image URL was approximate
+- manually compiled results
+- highlight image is picked based on words around it
+- language barrier
+- different content generated with embedded html (more visited places)
+- medium image URLs are encoded
+
+- scraper taking an array of web pages
+- rate the trips
