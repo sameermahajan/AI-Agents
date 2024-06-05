@@ -1,10 +1,13 @@
-from agents import BloggingAgents
+"""Get summaries of trips"""
+import sys
+
 from crewai import Crew
-from tasks import BloggingTasks
-from tools import ScrapeWebPage
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-import sys
+
+from agents import BloggingAgents
+from tasks import BloggingTasks
+from tools import ScrapeWebPage
 
 load_dotenv()
 
@@ -20,11 +23,11 @@ if len(sys.argv) > 1:
 agents = BloggingAgents(llm)
 tasks = BloggingTasks(website)
 
-summarizer_agent = agents.SummarizeTripAgent()
+summarizer_agent = agents.summarize_trip_agent()
 # summarizer_task = tasks.SummarizeTripTask(summarizer_agent, 
 #                                        [ScrapeWebPage.get_content])
 
-summarizer_task = tasks.SummarizeTripWithImageTask(summarizer_agent, 
+summarizer_task = tasks.summarize_trip_with_image_task(summarizer_agent, 
                                         [ScrapeWebPage.get_content_with_URLs])
 
 crew = Crew(

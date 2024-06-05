@@ -1,12 +1,15 @@
+"""various tasks"""
 from crewai import Task
 
 
 class BloggingTasks():
+    """various tasks useful for blogging"""
 
     def __init__ (self, website):
         self.website = website
 
-    def SummarizeTripTask(self, agent, tools):
+    def summarize_trip_task(self, agent, tools):
+        """task that summarizes a trip"""
         return Task(
             description=f"""Summarize trip from given blog content. Use the 
                 tools at your disposal to get the blog content from 
@@ -21,7 +24,9 @@ class BloggingTasks():
             tools=tools,
             agent=agent)
 
-    def SummarizeTripWithImageTask(self, agent, tools):
+    def summarize_trip_with_image_task(self, agent, tools):
+        """task that summarizes a trip. It provides a highlight image for
+        the trip in the summary."""
         return Task(
             description=f"""Summarize trip from given blog content. Use the 
                 tools at your disposal to get the blog content from 
@@ -39,7 +44,8 @@ class BloggingTasks():
             tools=tools,
             agent=agent)
     
-    def SummarizeTripsTask(self, agent, tools):
+    def summarize_trips_task(self, agent, tools):
+        """task that summarizes multiple trips"""
         return Task(
         description=f"""Summarize trips from given blog content. Use the 
             tools at your disposal to get the blog content from
@@ -54,7 +60,9 @@ class BloggingTasks():
         tools=tools,
         agent=agent)
     
-    def SummarizeTripsWithImageTask(self, agent, tools):
+    def summariz_trips_with_image_task(self, agent, tools):
+        """task that summarizes multiple trips. It provides a highlight image for
+        each of the trips in the summary."""
         return Task(
         description=f"""Summarize trips from given blog content. Use the 
             tools at your disposal to get the blog content from
