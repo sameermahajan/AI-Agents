@@ -5,6 +5,7 @@ import sys
 from crewai import Crew
 from crewai_tools import FileReadTool
 from dotenv import load_dotenv
+from langchain_community.tools import DuckDuckGoSearchRun
 from langchain_openai import ChatOpenAI
 
 from agents import BloggingAgents
@@ -23,13 +24,14 @@ if len(sys.argv) > 2:
 
 llm = ChatOpenAI(model="gpt-4")
 previous_trips = FileReadTool("./trip_summaries_with_images.html")
+search_tool = DuckDuckGoSearchRun()
 
 agents = BloggingAgents(llm)
 tasks = BloggingTasks("")
 
 recommender_agent = agents.recommend_trip()
 recommender_task = tasks.recommend_trip_task(recommender_agent,
-                                             [previous_trips],
+                                             [previous_trips, search_tool],
                                              NEXT_TRIP_TIME,
                                              DURATION)
 
