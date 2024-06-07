@@ -99,7 +99,53 @@ class BloggingTasks():
                 tools to learn about previous trips as well as to decide the
                 destination for the next trip.""",
             expected_output = "destination of the next trip",
-             max_inter = 3,
+            max_inter = 3,
+            tools = tools,
+            agent = agent
+        )
+    
+    def travel_blogger_task(self, agent, tools):
+        """Task that creates a travel blog."""
+
+        return Task(
+            description = f"""Create an engaing travel blog as if you have
+                completed the specified trip. Make use of the
+                given itinerary for the destination and visited places to
+                blog about. Get information about the places using internet
+                seaarch. Also get images from the internet to embed in the
+                blog to make it engaging. For styling of the blogging scrape 
+                the {self.website} for sample blog as a reference. Truncate
+                the sample blog, searched content, and finally generated blog
+                as necessary so that the 8k token limit is not exceeded.
+                Leverage given tools as and when required. DO NOT use the
+                scraping tool while doing internet search but ONLY to read
+                the sample blog for styling reference.""",
+            expected_output = """Comprehensive and Engaging travel blog  
+                in ASCII english format""",
+            max_inter = 3,
+            tools = tools,
+            agent = agent
+        )
+    
+    def travel_blogger_with_images_task(self, agent, tools):
+        """Task that creates a travel blog with embedded images in HTML."""
+
+        return Task(
+            description = f"""Create an engaing travel blog as if you have
+                completed the specified trip. Make use of the
+                given itinerary for the destination and visited places to
+                blog about. Get information about the places using internet
+                seaarch. Also get images from the internet to embed in the
+                blog to make it engaging. For styling of the blogging scrape 
+                the {self.website} for sample blog as a reference. Truncate
+                the sample blog, searched content, and finally generated blog
+                as necessary so that the 8k token limit is not exceeded.
+                Leverage given tools as and when required. DO NOT use the
+                scraping tool while doing internet search but ONLY to read
+                the sample blog for styling reference.""",
+            expected_output = """Comprehensive and Engaging travel blog with 
+                embedded images, hyperlinks in HTML format""",
+            max_inter = 3,
             tools = tools,
             agent = agent
         )
