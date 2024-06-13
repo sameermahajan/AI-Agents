@@ -4,4 +4,6 @@
 
 [CrewAI with LangGraph](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
 
+## LangGraph Perist to DB YouTube Video
+
 [![LangGraph Persistence to DB](LangGraph_Persistence_to_DB.png)](https://youtu.be/GqKUmrd5FEk)
