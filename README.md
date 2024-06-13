@@ -2,6 +2,8 @@
 
 [Medium Blog](https://sameermahajan.medium.com/personalized-blogging-with-ai-agents-3da8b3ad2f63)
 
+[Trip Planner](https://github.com/sameermahajan/trip-planner-with-crewai-2_0)
+
 [Virtul Trip!](https://sameermahajan.wordpress.com/2024/06/12/athens-to-santorini-a-week-in-greece/)
 
 [CrewAI with LangGraph](https://github.com/joaomdmoura/crewAI-examples/tree/main/CrewAI-LangGraph)
