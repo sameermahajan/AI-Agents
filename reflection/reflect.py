@@ -11,7 +11,7 @@ def ask_gpt(prompt, temperature=0.7):
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature
     )
-    return response
+    return response.choices[0].message.content
 
 def agent_task(task):
     return ask_gpt(f"You are an expert assistant. Complete the following task:\n\nTask: {task}")
