@@ -1,5 +1,5 @@
 # First Attempt
-
+```
 def is_prime(n):
     """Check if a number is prime."""
     if n <= 1:
@@ -14,3 +14,4 @@ def is_prime(n):
             return False
         i += 6
     return True
+```
